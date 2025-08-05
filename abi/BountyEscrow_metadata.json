@@ -1,0 +1,265 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "bountyId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "hunter",
+						"type": "address"
+					}
+				],
+				"name": "BountyAssigned",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "bountyId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "hunter",
+						"type": "address"
+					}
+				],
+				"name": "BountyClaimed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "bountyId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "BountyCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bountyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "hunter",
+						"type": "address"
+					}
+				],
+				"name": "assignHunter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bounties",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "hunter",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "claimed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "bountyIdCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bountyId",
+						"type": "uint256"
+					}
+				],
+				"name": "claimBounty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "createBounty",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "bountyId",
+						"type": "uint256"
+					}
+				],
+				"name": "getBounty",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "hunter",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "claimed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"assignHunter(uint256,address)": {
+					"notice": "Owner assigns a hunter to the bounty"
+				},
+				"claimBounty(uint256)": {
+					"notice": "Hunter claims bounty once completed"
+				},
+				"createBounty()": {
+					"notice": "Fund a bounty with ETH"
+				},
+				"getBounty(uint256)": {
+					"notice": "View bounty details"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"BountyEscrow.sol": "BountyEscrow"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"BountyEscrow.sol": {
+			"keccak256": "0xe14d18cca27dec7346ca18e04617ec3eeb77970a3ed8fbf77ae413979a4362ce",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b099ec78626e06ae6dad353dcaabafa810c34651bb327d8c671ae50bcc9da2b2",
+				"dweb:/ipfs/QmRd7frYkzR3kAYqv2o1VqqQ4JKHqtP5Fz6yaAbJw3gK3e"
+			]
+		}
+	},
+	"version": 1
+}
